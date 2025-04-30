@@ -19,6 +19,10 @@ body {
     font-family: var(--font-family);
 }
 
+h4, p, ul {
+    all: unset;
+}
+
 /* Header */
 
 #header {
@@ -177,38 +181,40 @@ body {
     gap: 10px;
 }
 
-#login-form label {
-    align-self: start;
-    font-size: 1em;
-    font-weight: thinner;
+.form-div .mb-2, 
+.form-div .mb-3 {
+    width: 100%;
 }
 
-#login-form input[type="email"],
-#login-form input[type="password"] {
+.form-control {
+    border-radius: unset;
     width: 100%;
     border: none;
     border-bottom: 1px solid var(--secondary-color);
-    margin-bottom: 10px;
     padding: 2px;
-    font-size: .8em;
 }
 
-#login-form input[type="submit"],
-#login-form input[type="button"] {
-    height: 40px;
+.btn-primary,
+.btn-secondary {
     width: 100%;
     color: var(--tertiary-color);
-    font-size: .9em;
+    font-size: 1em;
     border: none;
-    cursor: pointer;
     transition: all 0.3s ease-in-out;
+    border-radius: unset;
 }
 
-#login-form input[type="submit"]:hover {
+.btn-primary:hover {
     background-color: var(--primary-color);
 }
-#login-form input[type="button"]:hover {
+
+.btn-secondary:hover {
     background-color: var(--senary-color);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    font-weight: bold;
 }
 
 .form-div {
@@ -287,14 +293,6 @@ body {
 #search-form {
     width: auto;
     height: 100%;
-}
-
-#search-form input[type="text"] {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-bottom: 1px solid var(--secondary-color);
-    font-size: 1em;
 }
 
 #nav-slap.show,
@@ -455,24 +453,21 @@ body,
 #header,
 #header-icons,
 #login-slap,
-#login-form input[type="email"],
-#login-form input[type="password"],
+.form-control,
+#nav-slap,
+#filter-slap,
+#bag-slap,
+#favorite-slap,
+#search-slap,
 #banner,
 .product,
 .background {
     background-color: var(--tertiary-color);
 }
 
-#nav-slap,
-#filter-slap,
-#bag-slap,
-#favorite-slap,
-#search-slap {
-    background-color: var(--quaternary-color);
-}
-
 #nav a,
-#login-form input[type="submit"]:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
 #login-form input[type="button"]:hover,
 #forgot-password {
     color: var(--secondary-color);
@@ -480,14 +475,14 @@ body,
 
 #logo,
 #header-icons button,
-#login-form input[type="submit"],
-#login-form input[type="button"],
+.btn-primary,
+.btn-secondary,
 .exit,
 #footer-logo,
 #contact-icons a,
 .card-title a,
 #novedades-title a,
-.carousel-btn,
+.carrusel-button,
 #filter-button,
 .pagination-button.next,
 .pagination-button.prev {
@@ -499,7 +494,7 @@ body,
 .exit:hover,
 .card-title a:hover,
 #novedades-title a:hover,
-.carousel-btn:hover,
+.carrusel-button:hover,
 .pagination-button.next:hover,
 .pagination-button.prev:hover,
 #filter-button:hover {
@@ -551,12 +546,15 @@ body,
     #nav {
         display: flex;
         align-items: center;
-        margin-left: 17px;
     }
     
     #nav li {
         display: inline;
         margin-right: 10px;
+    }
+
+    #nav li:nth-last-child(1) {
+        margin-right: 0;
     }
     
     #nav a {

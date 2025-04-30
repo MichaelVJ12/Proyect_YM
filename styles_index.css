@@ -105,7 +105,7 @@
     font-weight: normal;
 }
 
-#products-carousel {
+#carrusel-novedades {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
@@ -115,20 +115,20 @@
     margin: 10px 10px 20px 10px;
 }
 
-#carousel {
+#carrusel {
     width: 100%;
     height: 100%;
     align-content: center;
     overflow: hidden;
 }
 
-#carousel-inner {
+#carrusel-inner {
     display: flex;
     transition: transform 0.5s ease;
     width: 100%;
 }
 
-.carousel-item {
+.carrusel-item {
     display: grid;
     grid-template: 70vw / repeat(2, 1fr);
     justify-content: center;
@@ -137,11 +137,11 @@
     flex: 0 0 100%;
 }
 
-.carousel-btn:not(#carousel-controls .carousel-btn){
+.carrusel-button:not(#carrusel-controls .carrusel-button){
     display: none;
 }
 
-#carousel-controls {
+#carrusel-controls {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -150,7 +150,7 @@
     padding: 0 40px;
 }
 
-#carousel-indicators {
+#carrusel-indicators {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,7 +172,7 @@
     pointer-events: none;
 }
 
-.carousel-btn {
+.carrusel-button {
     width: 30px;
     height: 30px;
     border: none;
@@ -180,14 +180,14 @@
     cursor: pointer;
 }
 
-.next-btn {
+.next-button {
     mask: url("./Assets/angle-right.svg") no-repeat center;
     mask-size: 100%;
     -webkit-mask: url("./Assets/angle-right.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
-.prev-btn {
+.prev-button {
     mask: url("./Assets/angle-left.svg") no-repeat center;
     mask-size: 100%;
     -webkit-mask: url("./Assets/angle-left.svg") no-repeat center;
@@ -197,36 +197,36 @@
 /* Media Queries */
 
 @media (min-width: 768px) {
-    .carousel-item{
+    .carrusel-item {
         grid-template: 40vw / repeat(3, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
-    .carousel-item{
+    .carrusel-item {
         grid-template: 35vw / repeat(4, 1fr);
     }
 }
 
 @media (min-width: 768px) or (min-width: 1024px) {
-    #products-carousel {
+    #carrusel-novedades {
         grid-template-columns: 40px 1fr 40px;
         grid-template-rows: 1fr auto;
         justify-items: center;
         margin: 10px 20px 20px 20px;
     }
 
-    #carousel-controls {
+    #carrusel-controls {
         grid-column: 2;
         grid-row: 2;
         justify-content: center;
     }
 
-    .carousel-btn{
+    .carrusel-button {
         display: none;
     }
 
-    .carousel-btn:not(#carousel-controls .carousel-btn){
+    .carrusel-button:not(#carrusel-controls .carrusel-button){
         display: block;
     }
 }

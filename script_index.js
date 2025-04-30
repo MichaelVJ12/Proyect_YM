@@ -137,9 +137,9 @@ function renderCarousel() {
   const perSlide = getItemsPerSlide();
   let slides = chunkArray(products, perSlide);
 
-  const inner = document.getElementById('carousel-inner');
+  const inner = document.getElementById('carrusel-inner');
   inner.innerHTML = slides.map((slide) =>
-    `<div class="carousel-item">` +
+    `<div class="carrusel-item">` +
       slide.map(() =>
         `<div class="product">
            <div class="product-img"></div>
@@ -152,7 +152,7 @@ function renderCarousel() {
     `</div>`
   ).join('');
 
-  const indicatorsContainer = document.getElementById('carousel-indicators');
+  const indicatorsContainer = document.getElementById('carrusel-indicators');
   // Genera un botón por cada slide
   indicatorsContainer.innerHTML = slides.map((_, idx) =>
     `<button class="indicator ${idx === 0 ? 'active' : ''}" onclick="goToSlide(${idx})"></button>`
@@ -165,13 +165,13 @@ function renderCarousel() {
 
 // Salta a la slide 'idx' y actualiza el indicador
 function goToSlide(idx) {
-  const slides = document.querySelectorAll('.carousel-item');
+  const slides = document.querySelectorAll('.carrusel-item');
   // Lógica de límite igual que moveSlide
   slideIndex = idx;
   if (slideIndex >= slides.length) slideIndex = 0;
   if (slideIndex < 0) slideIndex = slides.length - 1;
   // Mueve el carrusel
-  document.getElementById('carousel-inner').style.transform = `translateX(${-100 * slideIndex}%)`;
+  document.getElementById('carrusel-inner').style.transform = `translateX(${-100 * slideIndex}%)`;
   // Reinicia autoplay
   clearInterval(slideInterval);
   slideInterval = setInterval(() => moveSlide(1), 5000);
@@ -180,7 +180,7 @@ function goToSlide(idx) {
 }
 
 function actualizarIndicadores() {
-  const btns = document.querySelectorAll('#carousel-indicators .indicator');
+  const btns = document.querySelectorAll('#carrusel-indicators .indicator');
   btns.forEach((btn, i) => {
     btn.classList.toggle('active', i === slideIndex);
   });
@@ -188,14 +188,14 @@ function actualizarIndicadores() {
 
 // mueve slide (manual y autoplay)
 function moveSlide(n) {
-  const slides = document.querySelectorAll('.carousel-item');
+  const slides = document.querySelectorAll('.carrusel-item');
   slideIndex += n;
 
   if (slideIndex >= slides.length) slideIndex = 0;
   if (slideIndex < 0) slideIndex = slides.length - 1;
 
   const offset = slideIndex * -100;
-  document.getElementById('carousel-inner').style.transform = `translateX(${offset}%)`;
+  document.getElementById('carrusel-inner').style.transform = `translateX(${offset}%)`;
 
   // reinicia el autoplay tras interacción
   clearInterval(slideInterval);
