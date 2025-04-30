@@ -154,7 +154,7 @@ body {
 #login-img {
     display: block;
     position: relative;
-    background-image: url("./Assets/login-img.jpg");
+    background-image: url("./Assets/login-img.webp");
     background-size: cover;
     background-position: center;
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 35%);
@@ -350,7 +350,7 @@ body {
     height: 100%;
     object-fit: cover;
     padding: 16px;
-    background-image: url("./Assets/image-demo.jpg");
+    background-image: url("./Assets/image-demo.webp");
     background-size: cover;
     background-position: center;
     margin: 16px 16px 0 16px;
