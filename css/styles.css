@@ -48,7 +48,7 @@ h4, p, ul {
 #logo {
     width: 180px;
     height: 50px;
-    mask: url("./img/img_YM/Logo-completo.svg");
+    mask: url("/img/img_YM/Logo-completo.svg");
     mask-size: 100%;
     mask-position: center;
     mask-repeat: no-repeat;
@@ -86,23 +86,23 @@ h4, p, ul {
 }
 
 #search-button {
-    mask: url("./img/img_btns/Inteface-btns/search.svg") no-repeat center;
+    mask: url("/img/img_btns/Inteface-btns/search.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("./img/img_btns/Inteface-btns/search.svg") no-repeat center;
+    -webkit-mask: url("/img/img_btns/Inteface-btns/search.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
 #bag-button {
-    mask: url("./img/img_btns/Inteface-btns/bag.svg") no-repeat center;
+    mask: url("/img/img_btns/Inteface-btns/bag.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("./img/img_btns/Inteface-btns/bag.svg") no-repeat center;
+    -webkit-mask: url("/img/img_btns/Inteface-btns/bag.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
 #favorite-button {
-    mask: url("./img/img_btns/Inteface-btns/favorite.svg") no-repeat center;
+    mask: url("/img/img_btns/Inteface-btns/favorite.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("./img/img_btns/Inteface-btns/favorite.svg") no-repeat center;
+    -webkit-mask: url("/img/img_btns/Inteface-btns/favorite.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
