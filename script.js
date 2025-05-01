@@ -21,6 +21,8 @@ let exit_login = document.getElementById("exit-login");
 let exit_burger = document.getElementById("exit-nav");
 let exit_filter = document.getElementById("exit-filter");
 
+let register_button = document.getElementById("register-button");
+
 // Esta sección contiene los scripts del encabezado.
 function mostrarOcultarBlur(element, button) {
     element.classList.toggle("show");
@@ -135,4 +137,8 @@ exit_search.addEventListener("click", () => mostrarElemento(3));
 exit_login.addEventListener("click", () => mostrarElemento(0));
 exit_burger.addEventListener("click", () => mostrarElemento(4));
 if (exit_filter)   exit_filter.addEventListener("click", () => mostrarElemento(5));
+
+register_button.addEventListener("click", () => {
+    window.location.href = "register.html";
+});
 });
