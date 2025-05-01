@@ -15,9 +15,9 @@
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease-in-out;
-    mask: url("./Assets/Store-masks/bars-filter.svg") no-repeat center;
+    mask: url("/img/img_btns/Store-btns/bars-filter.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("./Assets/Store-masks/bars-filter.svg") no-repeat center;
+    -webkit-mask: url("/img/img_btns/Store-btns/bars-filter.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
@@ -56,13 +56,17 @@
 }
 
 .pagination-button.prev {
-    mask: url("./Assets/Store-masks/angle-small-left.svg") no-repeat center;
+    mask: url("/img/img_btns/Store-btns/angle-small-left.svg") no-repeat center;
     mask-size: 100%;
+    -webkit-mask: url("/img/img_btns/Store-btns/angle-small-left.svg") no-repeat center;
+    -webkit-mask-size: 100%;
 }
 
 .pagination-button.next {
-    mask: url("./Assets/Store-masks/angle-small-right.svg") no-repeat center;
+    mask: url("/img/img_btns/Store-btns/angle-small-right.svg") no-repeat center;
     mask-size: 100%;
+    -webkit-mask: url("/img/img_btns/Store-btns/angle-small-right.svg") no-repeat center;
+    -webkit-mask-size: 100%;
 }
 
 .pagination-button.active {
