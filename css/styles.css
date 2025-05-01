@@ -48,7 +48,7 @@ h4, p, ul {
 #logo {
     width: 180px;
     height: 50px;
-    mask: url("/img/img_YM/Logo-completo.svg");
+    mask: url("./img/img_YM/Logo-completo.svg");
     mask-size: 100%;
     mask-position: center;
     mask-repeat: no-repeat;
@@ -86,37 +86,37 @@ h4, p, ul {
 }
 
 #search-button {
-    mask: url("/img/img_btns/Inteface-btns/search.svg") no-repeat center;
+    mask: url("./img/img_btns/Inteface-btns/search.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/Inteface-btns/search.svg") no-repeat center;
+    -webkit-mask: url("./img/img_btns/Inteface-btns/search.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
 #bag-button {
-    mask: url("/img/img_btns/Inteface-btns/bag.svg") no-repeat center;
+    mask: url("./img/img_btns/Inteface-btns/bag.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/Inteface-btns/bag.svg") no-repeat center;
+    -webkit-mask: url("./img/img_btns/Inteface-btns/bag.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
 #favorite-button {
-    mask: url("/img/img_btns/Inteface-btns/favorite.svg") no-repeat center;
+    mask: url("./img/img_btns/Inteface-btns/favorite.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/Inteface-btns/favorite.svg") no-repeat center;
+    -webkit-mask: url("./img/img_btns/Inteface-btns/favorite.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
 #login-button {
-    mask: url("/img/img_btns/Inteface-btns/usuario.svg") no-repeat center;
+    mask: url("./img/img_btns/Inteface-btns/usuario.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/Inteface-btns/usuario.svg") no-repeat center;
+    -webkit-mask: url("./img/img_btns/Inteface-btns/usuario.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
 #burger-button {
-    mask: url("/img/img_btns/Inteface-btns/burger.svg") no-repeat center;
+    mask: url("./img/img_btns/Inteface-btns/burger.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/Inteface-btns/burger.svg") no-repeat center;
+    -webkit-mask: url("./img/img_btns/Inteface-btns/burger.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
@@ -158,7 +158,7 @@ h4, p, ul {
 #login-img {
     display: block;
     position: relative;
-    background-image: url("/img/login-img.webp");
+    background-image: url("./img/login-img.webp");
     background-size: cover;
     background-position: center;
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 35%);
@@ -309,9 +309,9 @@ h4, p, ul {
     height: 25px;
     border: none;
     transition: background-color 0.3s ease-in-out;
-    mask: url("/img/img_btns/x.svg");
+    mask: url("./img/img_btns/x.svg");
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/x.svg");
+    -webkit-mask: url("./img/img_btns/x.svg");
     -webkit-mask-size: 100%;
     cursor: pointer;
 }
@@ -348,7 +348,7 @@ h4, p, ul {
     height: 100%;
     object-fit: cover;
     padding: 16px;
-    background-image: url("/img/image-demo.webp");
+    background-image: url("./img/image-demo.webp");
     background-size: cover;
     background-position: center;
     margin: 16px 16px 0 16px;
@@ -387,9 +387,9 @@ h4, p, ul {
 #footer-logo {
     width: 80.43px;
     height: 60.95px;
-    mask: url("/img/img_YM/Logo.svg");
+    mask: url("./img/img_YM/Logo.svg");
     mask-size: 100%;
-    -webkit-mask: url("/img/img_YM/Logo.svg");
+    -webkit-mask: url("./img/img_YM/Logo.svg");
     -webkit-mask-size: 100%;
 }
 
@@ -403,9 +403,9 @@ h4, p, ul {
 }
 
 #contact-facebook {
-    mask: url("/img/img_btns/Contact-btns/facebook.svg");
+    mask: url("./img/img_btns/Contact-btns/facebook.svg");
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/Contact-btns/facebook.svg");
+    -webkit-mask: url("./img/img_btns/Contact-btns/facebook.svg");
     -webkit-mask-size: 100%;
 }
 
@@ -430,16 +430,16 @@ h4, p, ul {
 }
 
 #contact-instagram {
-    mask: url("/img/img_btns/Contact-btns/instagram.svg");
+    mask: url("./img/img_btns/Contact-btns/instagram.svg");
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/Contact-btns/instagram.svg");
+    -webkit-mask: url("./img/img_btns/Contact-btns/instagram.svg");
     -webkit-mask-size: 100%;
 }
 
 #contact-whatsapp {
-    mask: url("/img/img_btns/Contact-btns/whatsapp.svg");
+    mask: url("./img/img_btns/Contact-btns/whatsapp.svg");
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/Contact-btns/whatsapp.svg");
+    -webkit-mask: url("./img/img_btns/Contact-btns/whatsapp.svg");
     -webkit-mask-size: 100%;
 }
 

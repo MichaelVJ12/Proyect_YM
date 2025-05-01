@@ -93,9 +93,9 @@
 #novedades-title a {
     height: 30px;
     width: 30px;
-    mask: url("/img/img_btns/arrow.svg") no-repeat center;
+    mask: url("./img/img_btns/arrow.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/arrow.svg") no-repeat center;
+    -webkit-mask: url("./img/img_btns/arrow.svg") no-repeat center;
     -webkit-mask-size: 100%;
     transition: background-color 0.3s ease-in-out;
 }
@@ -181,16 +181,16 @@
 }
 
 .next-button {
-    mask: url("/img/img_btns/angle-right.svg") no-repeat center;
+    mask: url("./img/img_btns/angle-right.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/angle-right.svg") no-repeat center;
+    -webkit-mask: url("./img/img_btns/angle-right.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
 .prev-button {
-    mask: url("/img/img_btns/angle-left.svg") no-repeat center;
+    mask: url("./img/img_btns/angle-left.svg") no-repeat center;
     mask-size: 100%;
-    -webkit-mask: url("/img/img_btns/angle-left.svg") no-repeat center;
+    -webkit-mask: url("./img/img_btns/angle-left.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
