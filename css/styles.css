@@ -70,6 +70,7 @@ h4, p, ul {
     border: none;
 }
 
+#burger-button.disabled,
 #search-button.disabled,
 #bag-button.disabled,
 #favorite-button.disabled,
