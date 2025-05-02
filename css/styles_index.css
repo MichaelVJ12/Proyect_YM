@@ -1,9 +1,5 @@
 #banner {
     margin-top: 64px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 232px;
 }
 
@@ -13,8 +9,7 @@
 }
 
 .background-img {
-    position: absolute;
-    opacity: .45;
+    opacity: .3;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -25,20 +20,9 @@
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 80%);
 }
 
-#banner-text {
-    position: relative;
-    font-size: 2em;
-    text-align: center;
-}
-
-#banner-text h1 {
-    font-size: 2.4em;
+#banner-text h1{
+    font-size: 5em;
     font-weight: lighter;
-}
-
-#categorias,
-#novedades {
-    position: relative;
 }
 
 #categorias {
@@ -47,24 +31,15 @@
 
 #novedades {
     height: auto;
-    width: 100%;
 }
 
 #novedades-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 17px 40px 6px 40px;
 }
 
 #categorias-title {
-    position: sticky;
-    top: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 50px;
-    padding: 0 0 6px 0;
+    top: 64px;
 }
 
 #categorias-title h2,
@@ -74,18 +49,11 @@
 }
 
 .cards {
-    position: sticky;
-    top: 116px;
-    overflow: hidden;
-    width: 100%;
     height: 590px;
+    top: 116px;
 }
 
 .card-title {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 24px 40px 8px 40px;
 }
 

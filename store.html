@@ -12,8 +12,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header id="header">
-            <div id="header-logo">
+        <header id="header" class="navbar navbar-expand-lg position-fixed top-0 start-0 end-0 z-3">
+            <div id="header-logo" class="navbar-brand d-flex align-items-center justify-content-center">
                 <a id="logo" href="index.html"></a>
             </div>
             <nav id="nav">
@@ -23,7 +23,7 @@
                     <li><a href="#">Nosotros</a></li>
                 </ul>
             </nav>
-            <div id="header-icons">
+            <div id="header-icons" class="d-flex">
                 <button id="burger-button"></button>
                 <button id="search-button"></button>
                 <button id="favorite-button"></button>
@@ -93,24 +93,24 @@
             <div id="blur"></div>
         </div>
         <main id="container">
-            <section id="store">
+            <section id="store" class="content-fluid">
                 <div id="store-options">
                     <button id="filter-button"></button>
                 </div>
                 <div id="products"></div>
-                <div id="pagination"></div>
+                <div id="pagination" class="d-flex justify-content-center"></div>
             </section>
         </main>
-        <footer id="footer">
+        <footer id="footer" class="content-fluid d-flex flex-column align-items-center justify-content-center">
             <div id="footer-logo"></div>
-            <div id="contact-icons">
-                <a id="contact-instagram"></a>
+            <div id="contact-icons" class="d-flex ">
+                <a id="contact-instagram" class="position-relative d-inline-block overflow-hidden"></a>
                 <a id="contact-facebook"></a>
                 <a id="contact-whatsapp"></a>
             </div>
         </footer>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/script_store.js"></script>
     </body>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/script_store.js"></script>
 </html>

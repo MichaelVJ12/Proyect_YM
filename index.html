@@ -12,8 +12,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header id="header">
-            <div id="header-logo">
+        <header id="header" class="navbar navbar-expand-lg position-fixed top-0 start-0 end-0 z-3">
+            <div id="header-logo" class="navbar-brand d-flex align-items-center justify-content-center">
                 <a id="logo" href="#"></a>
             </div>
             <nav id="nav">
@@ -23,7 +23,7 @@
                     <li><a href="#">Nosotros</a></li>
                 </ul>
             </nav>
-            <div id="header-icons">
+            <div id="header-icons" class="d-flex">
                 <button id="burger-button"></button>
                 <button id="search-button"></button>
                 <button id="favorite-button"></button>
@@ -87,14 +87,14 @@
             <div id="blur"></div>
         </div>
         <main id="container">
-            <section id="banner">
-                <img id="banner-img" class="background-img" src="./img/clothes.webp" alt="Banner de la tienda">
-                <div id="banner-text">
+            <section id="banner" class="container-fluid position-relative d-flex align-items-center justify-content-center">
+                <img id="banner-img" class="background-img position-absolute" src="./img/clothes.webp" alt="Banner de la tienda">
+                <div id="banner-text" class="text-center position-relative">
                     <h1>Yesti Moda</h1>
                 </div>
             </section>
-            <section id="novedades">
-                <div id="novedades-title" >
+            <section id="novedades" class="container-fluid position-relative">
+                <div id="novedades-title" class="d-flex align-items-center justify-content-between">
                     <h2>Novedades</h2>
                     <a href="store.html"></a>
                 </div>
@@ -112,34 +112,34 @@
                     </div>
                 </div>
             </section>
-            <section id="categorias">
-                <section id="categorias-title">
+            <section id="categorias" class="container-fluid">
+                <section id="categorias-title" class="sticky-top d-flex align-items-center justify-content-center p-1 z-0">
                     <h2>Categorías</h2>
                 </section>
-                <section id="deportes-card" class="cards">
+                <section id="deportes-card" class="container-fluid cards sticky-top z-0">
                     <div class="background">
-                        <img id="sports-img" class="background-img" src="./img/cards_img/sport-image.webp" alt="Runner en la ciudad">
-                        <div id="sports-title" class="card-title"> 
+                        <img id="sports-img" class="background-img position-absolute" src="./img/cards_img/sport-image.webp" alt="Runner en la ciudad">
+                        <div id="sports-title" class="card-title position-relative d-flex align-items-center justify-content-between"> 
                             <h3>Deportiva</h3>
                             <a href="store.html"></a>
                         </div>
                         <div></div>
                     </div>
                 </section>
-                <section id="casual-card" class="cards">
+                <section id="casual-card" class="cards sticky-top z-0">
                     <div class="background">
-                        <img id="casual-img" class="background-img" src="./img/cards_img/casual-image.webp" alt="Mujer en la ciudad">
-                        <div id="casual-title" class="card-title"> 
+                        <img id="casual-img" class="background-img position-absolute" src="./img/cards_img/casual-image.webp" alt="Mujer en la ciudad">
+                        <div id="casual-title" class="card-title position-relative d-flex align-items-center justify-content-between"> 
                             <h3>Casual</h3>
                             <a href="store.html"></a>
                         </div>
                         <div></div>
                     </div>
                 </section>
-                <section id="elegante-card" class="cards">
+                <section id="elegante-card" class="cards sticky-top z-0">
                     <div class="background">
-                        <img id="formal-img" class="background-img" src="./img/cards_img/elegant-image.webp" alt="Mujer sentada en el parque">
-                        <div id="formal-title" class="card-title"> 
+                        <img id="formal-img" class="background-img position-absolute" src="./img/cards_img/elegant-image.webp" alt="Mujer sentada en el parque">
+                        <div id="formal-title" class="container-fluid card-title position-relative d-flex align-items-center justify-content-between"> 
                             <h3>Elegante</h3>
                             <a href="store.html"></a>
                         </div>
@@ -148,10 +148,10 @@
                 </section>
             </section>
         </main>
-        <footer id="footer">
+        <footer id="footer" class="content-fluid d-flex flex-column align-items-center justify-content-center">
             <div id="footer-logo"></div>
-            <div id="contact-icons">
-                <a id="contact-instagram"></a>
+            <div id="contact-icons" class="d-flex ">
+                <a id="contact-instagram" class="position-relative d-inline-block overflow-hidden"></a>
                 <a id="contact-facebook"></a>
                 <a id="contact-whatsapp"></a>
             </div>
