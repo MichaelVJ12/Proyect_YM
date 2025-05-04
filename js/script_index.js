@@ -3,7 +3,6 @@ const products = [];
     products.push({
       name: `Producto ${i}`,
       price: `$${(Math.random() * 100000).toFixed(0)}`,
-      image: '../img/image-demo.webp',
     });
   }
 
@@ -31,7 +30,7 @@ const products = [];
           ${slide.map(prod => `
             <div class="col-6 col-md-4 col-lg-3 mb-4">
               <div class="card rounded-0">
-                <img src="${prod.image}" class="card-img-top object-fit-cover rounded-0 px-3 pt-3" alt="${prod.name}">
+                <img src="../img/image-demo.webp" class="card-img-top object-fit-cover rounded-0 px-3 pt-3" alt="${prod.name}">
                 <div class="card-body justify-content-center d-flex flex-column">
                   <h4 class="card-title fs-6 fw-normal">${prod.name}</h4>
                   <p class="card-text">${prod.price}</p>
