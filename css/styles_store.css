@@ -1,11 +1,8 @@
-#store {
-    margin-top: 64px;
-}
+/* Store Page Styles */
 
 #filter-button {
     width: 25px;
     height: 25px;
-    margin-left: 20px;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease-in-out;
@@ -13,19 +10,6 @@
     mask-size: 100%;
     -webkit-mask: url("../img/img_btns/Store-btns/bars-filter.svg") no-repeat center;
     -webkit-mask-size: 100%;
-}
-
-#products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 70vw);
-    padding: 10px 20px 20px 20px;
-    margin-bottom: 10px;
-    gap: 20px;
-}
-
-#pagination {
-    gap: 10px;
 }
 
 #pagination button {
@@ -63,20 +47,4 @@
 .pagination-button.active {
     font-weight: bold;
     pointer-events: none;
-}
-
-/* Media Queries */
-
-@media (min-width: 768px) {
-    #products {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 45vw);
-    }
-}
-
-@media (min-width: 1024px) {
-    #products {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 35vw);
-    }
 }

@@ -1,18 +1,7 @@
+/* Index Page Styles */
+
 #banner {
-    margin-top: 64px;
     height: 232px;
-}
-
-.background {
-    width: 100%;
-    height: 100%;
-}
-
-.background-img {
-    opacity: .3;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
 }
 
 #sports-img, #casual-img, #formal-img {
@@ -27,14 +16,6 @@
 
 #categorias {
     height: 2030px;
-}
-
-#novedades {
-    height: auto;
-}
-
-#novedades-title {
-    padding: 17px 40px 6px 40px;
 }
 
 #categorias-title {
@@ -53,11 +34,9 @@
     top: 116px;
 }
 
-.card-title {
-    padding: 24px 40px 8px 40px;
-}
-
-.card-title a,
+#formal-title a,
+#casual-title a,
+#sports-title a,
 #novedades-title a {
     height: 30px;
     width: 30px;
@@ -68,133 +47,47 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-.card-title h3 {
+#formal-title h3,
+#casual-title h3,
+#sports-title h3 {
     font-size: 2em;
     font-weight: normal;
 }
 
-#carrusel-novedades {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
-    width: auto;
-    height: auto;
-    margin: 10px 10px 20px 10px;
+.carousel-item {
+    transition: transform .5s ease-in-out;
 }
 
-#carrusel {
-    width: 100%;
-    height: 100%;
-    align-content: center;
-    overflow: hidden;
-}
-
-#carrusel-inner {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 100%;
-}
-
-.carrusel-item {
-    display: grid;
-    grid-template: 70vw / repeat(2, 1fr);
-    justify-content: center;
-    padding: 10px;
-    gap: 20px;
-    flex: 0 0 100%;
-}
-
-.carrusel-button:not(#carrusel-controls .carrusel-button){
-    display: none;
-}
-
-#carrusel-controls {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0 20px 0;
-    padding: 0 40px;
-}
-
-#carrusel-indicators {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.indicator {
+.carousel-indicators [data-bs-target] {
     width: 15px;
     height: 15px;
-    background-color: rgba(0,0,0,0.3);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-  
-.indicator.active {
-    background-color: rgba(0,0,0,0.8);
-    pointer-events: none;
+    border-radius: 100%;
 }
 
-.carrusel-button {
+.carousel-control-prev,
+.carousel-control-next {
     width: 30px;
     height: 30px;
-    border: none;
-    transition: background-color 0.3s ease-in-out;
-    cursor: pointer;
+    opacity: unset;
 }
 
-.next-button {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-control-next-icon {
     mask: url("../img/img_btns/angle-right.svg") no-repeat center;
     mask-size: 100%;
     -webkit-mask: url("../img/img_btns/angle-right.svg") no-repeat center;
     -webkit-mask-size: 100%;
 }
 
-.prev-button {
+.carousel-control-prev-icon {
     mask: url("../img/img_btns/angle-left.svg") no-repeat center;
     mask-size: 100%;
     -webkit-mask: url("../img/img_btns/angle-left.svg") no-repeat center;
     -webkit-mask-size: 100%;
-}
-
-/* Media Queries */
-
-@media (min-width: 768px) {
-    .carrusel-item {
-        grid-template: 40vw / repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .carrusel-item {
-        grid-template: 35vw / repeat(4, 1fr);
-    }
-}
-
-@media (min-width: 768px) or (min-width: 1024px) {
-    #carrusel-novedades {
-        grid-template-columns: 40px 1fr 40px;
-        grid-template-rows: 1fr auto;
-        justify-items: center;
-        margin: 10px 20px 20px 20px;
-    }
-
-    #carrusel-controls {
-        grid-column: 2;
-        grid-row: 2;
-        justify-content: center;
-    }
-
-    .carrusel-button {
-        display: none;
-    }
-
-    .carrusel-button:not(#carrusel-controls .carrusel-button){
-        display: block;
-    }
 }

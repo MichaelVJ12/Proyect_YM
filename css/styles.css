@@ -19,24 +19,15 @@ body {
     font-family: var(--font-family);
 }
 
-h4, p, ul {
-    all: unset;
-}
-
 /* Header */
 
 #header {
     height: 64px;
-    justify-content: center;
-    align-content: center;
+    padding: 0 40px;
 }
 
 #header-logo {
     margin-right: 0;
-}
-
-#nav {
-    display: none;
 }
 
 #logo {
@@ -57,8 +48,6 @@ h4, p, ul {
     position: fixed;
     bottom: 0;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px 50px;
 }
 
@@ -327,44 +316,12 @@ h4, p, ul {
 
 /* elementos */
 
+#container {
+    margin-top: 64px;
+}
+
 .container-fluid {
     padding: 0;
-}
-
-.product {
-    display: grid;
-    grid-template-rows: 4fr 1fr;
-    width: 100%;
-    height: 100%;
-    gap: 10px;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.product-img {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding: 16px;
-    background-image: url("../img/image-demo.webp");
-    background-size: cover;
-    background-position: center;
-    margin: 16px 16px 0 16px;
-}
-
-.product-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 16px;
-    padding: 16px;
-}
-
-#product-info h4 {
-    font-weight: normal;
-}
-
-#product-info p {
-    font-weight: bold;
 }
 
 /* Footer */
@@ -450,7 +407,6 @@ body,
 #favorite-slap,
 #search-slap,
 #banner,
-.product,
 .background {
     background-color: var(--tertiary-color);
 }
@@ -470,9 +426,13 @@ body,
 .exit,
 #footer-logo,
 #contact-icons a,
-.card-title a,
+#formal-title a,
+#casual-title a,
+#sports-title a,
 #novedades-title a,
-.carrusel-button,
+.carousel-control-prev-icon,
+.carousel-control-next-icon,
+.carousel-indicators [data-bs-target],
 #filter-button,
 .pagination-button.next,
 .pagination-button.prev {
@@ -482,9 +442,13 @@ body,
 #logo:hover,
 #header-icons button:hover,
 .exit:hover,
-.card-title a:hover,
+#formal-title a:hover,
+#casual-title a:hover,
+#sports-title a:hover,
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover,
+.carousel-indicators [data-bs-target],
 #novedades-title a:hover,
-.carrusel-button:hover,
 .pagination-button.next:hover,
 .pagination-button.prev:hover,
 #filter-button:hover {
@@ -497,13 +461,9 @@ body,
     color: var(--primary-color);
 }
 
-#burger-button.disabled,
-#search-button.disabled,
-#bag-button.disabled,
-#favorite-button.disabled,
-#login-button.disabled,
-#filter-button.disabled {
-    background-color: var(--quinary-color);
+.disabled {
+    color: var(--quinary-color);
+    opacity: 0.5;
 }
 
 .pagination-button.active {
@@ -528,49 +488,13 @@ body,
 
 @media (min-width: 768px) or (min-width: 1024px) {
 
-    #header {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 40px;
-    }
-
-    #nav {
-        display: flex;
-        align-items: center;
-    }
-    
-    #nav li {
-        display: inline;
-        margin-right: 10px;
-    }
-
-    #nav li:nth-last-child(1) {
-        margin-right: 0;
-    }
-    
-    #nav a {
-        text-decoration: none;
-        transition: color 0.3s ease-in-out;
-    }
-
     #nav-slap {
-        display: none;
-    }
-
-    #burger-button {
         display: none;
     }
     
     #header-icons {
         position: unset;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 0;
         width: auto;
-    }
-
-    #footer {
-        margin-bottom: 0;
     }
 
     #login-grid {

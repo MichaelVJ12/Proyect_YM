@@ -1,10 +1,11 @@
-// Script para la tienda de productos
-// Este script maneja la visualización de productos, la paginación y la interacción del usuario en la tienda.
-const product = { name: "", image: "", category: "", price: "", description: "" };
-let products = [];
-for (let i = 0; i < 100; i++) {
-    products.push(product);
-};
+const products = [];
+  for (let i = 1; i <= 100; i++) {
+    products.push({
+      name: `Producto ${i}`,
+      price: `$${(Math.random() * 100000).toFixed(0)}`,
+      image: '../img/image-demo.webp',
+    });
+  }
 
 const productsPerPage = 12;
 const totalProducts = products.length;
@@ -16,19 +17,28 @@ function displayProducts(page) {
     const displayedProducts = products.slice(startIndex, endIndex);
 
     const productContainer = document.getElementById('products');
-    productContainer.innerHTML = '';
+    productContainer.innerHTML = ''; // Limpiar productos anteriores
+
+    const row = document.createElement('div');
+    row.className = 'row g-4'; // Bootstrap row + gap
+
     displayedProducts.forEach(product => {
-        const productElement = document.createElement('article');
-        productElement.classList.add('product');
-        productElement.innerHTML = `
-            <div class="product-img"></div>
-            <div class="product-info">
-            <h4>Producto</h3>
-            <p>$99.999</p>
+        const col = document.createElement('div');
+        col.className = 'col-6 col-md-4 col-xl-3'; // 2, 3 y 4 columnas responsivo
+
+        col.innerHTML = `
+            <div class="card h-100 rounded-0">
+                <img src="${product.image}" class="card-img-top object-fit-cover px-3 pt-3" alt="${product.name}">
+                <div class="card-body d-flex flex-column justify-content-center">
+                    <h4 class="card-title fs-6 fw-normal">${product.name}</h4>
+                    <p class="card-text">${product.price}</p>
+                </div>
             </div>
         `;
-        productContainer.appendChild(productElement);
+        row.appendChild(col); // Agregamos la tarjeta a la fila
     });
+
+    productContainer.appendChild(row); // Insertamos la fila en el contenedor
 }
 
 //paginación de productos 
@@ -43,7 +53,7 @@ function displayPagination() {
     const endPage = Math.min(totalPages, startPage + maxButtons - 1);
 
     if (startPage > 1) {
-        const prevButton = createButton('❮', currentPage - 1);
+        const prevButton = createButton('prev', currentPage - 1);
         paginationContainer.appendChild(prevButton);
     }
 
@@ -53,16 +63,16 @@ function displayPagination() {
     }
 
     if (endPage < totalPages) {
-        const nextButton = createButton('❯', currentPage + 1);
+        const nextButton = createButton('next', currentPage + 1);
         paginationContainer.appendChild(nextButton);
     }
 }
 
 function createButton(text, page) {
     const button = document.createElement('button');
-    if (text == '❮') {
+    if (text == 'prev') {
         button.classList.add('prev');
-    }else if (text == '❯') {
+    }else if (text == 'next') {
         button.classList.add('next');
     }else{
         button.textContent = text;
@@ -75,6 +85,7 @@ function createButton(text, page) {
         currentPage = page;
         displayProducts(currentPage);
         displayPagination();
+        goHeader();
     });
     return button;
 }
@@ -84,5 +95,9 @@ displayPagination();
 
 function goHeader() {
     var options = document.getElementById('store-options');
-    encabezado.scrollIntoView({ behavior: 'smooth' });
+    const offsetTop = options.offsetTop-64;
+    window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+    });
 }
