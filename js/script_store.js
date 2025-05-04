@@ -27,7 +27,7 @@ function displayProducts(page) {
 
         col.innerHTML = `
             <div class="card h-100 rounded-0">
-                <img src="../img/image-demo.webp" class="card-img-top object-fit-cover px-3 pt-3" alt="${product.name}">
+                <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-3 pt-3" alt="${product.name}">
                 <div class="card-body d-flex flex-column justify-content-center">
                     <h4 class="card-title fs-6 fw-normal">${product.name}</h4>
                     <p class="card-text">${product.price}</p>
