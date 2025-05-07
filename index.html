@@ -6,165 +6,232 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="./css/styles.css">
-        <link rel="stylesheet" type="text/css" href="./css/styles_index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header id="header" class="navbar navbar-expand-lg position-fixed top-0 start-0 end-0 z-3 d-flex justify-content-center justify-content-md-between align-items-center">
-            <div id="header-logo" class="navbar-brand d-flex align-items-center justify-content-center">
-                <a id="logo" href="#"></a>
+        <header id="header" class="navbar navbar-expand-lg fixed-top z-3 d-flex justify-content-center justify-content-md-between align-items-center px-4 py-0">
+            <div id="header-logo" class="navbar-brand d-flex align-items-center justify-content-center me-0">
+                <a id="logo" href="index.html"></a>
             </div>
             <nav id="nav" class="nav d-none d-md-flex">
-                <a class="nav-link disabled" href="#">Inicio</a>
+                <a class="nav-link" href="index.html">Inicio</a>
                 <a class="nav-link" href="store.html">Tienda</a>
                 <a class="nav-link" href="#">Nosotros</a>
             </nav>
-            <div id="header-icons" class="d-flex justify-content-evenly justify-content-md-end align-items-center p-md-0">
-                <button id="burger-button" class="d-md-none"></button>
-                <button id="search-button"></button>
-                <button id="favorite-button"></button>
-                <button id="bag-button"></button>
-                <button id="login-button"></button>
+            <div id="header-icons" class="d-flex justify-content-evenly justify-content-md-end align-items-center p-md-0 gap-2 px-3 py-2">
+                <button type="button" id="burger-button" class="btn d-md-none border-0" data-bs-toggle="offcanvas" data-bs-target="#nav-slap" aria-controls="Hamburgesa"></button>
+                <button type="button" id="search-button" class="btn border-0" data-bs-toggle="offcanvas" data-bs-target="#search-slap" aria-controls="Busqueda"></button>
+                <button type="button" id="favorite-button" class="btn border-0" data-bs-toggle="offcanvas" data-bs-target="#favorite-slap" aria-controls="Favoritos"></button>
+                <button type="button" id="bag-button" class="btn border-0" data-bs-toggle="offcanvas" data-bs-target="#bag-slap" aria-controls="Bolsa"></button>
+                <button type="button" id="login-button" class="btn border-0" data-bs-toggle="offcanvas" data-bs-target="#nav-slap" aria-controls="Inicio de Sesión"></button>
             </div>
         </header>
         <div id="slaps">
-            <section id="nav-slap">
-                <div class="slap-title">
-                    <h2>Navegación</h2>
-                    <button id="exit-nav" class="exit"></button>
+            <section id="nav-slap" class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" aria-labelledby="Espacio de navegación movil">
+                <div class="offcanvas-header">
+                    <h2 id="nav-slap-title" class="offcanvas-title">Navegación</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <nav id="nav-slap-nav" class="nav d-flex flex-column">
+                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link" href="store.html">Tienda</a>
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </nav>
                 </div>
             </section>
-            <section id="login-slap">
-                <div id="login-topbar">
-                    <button id="exit-login" class="exit"></button>
+            <section id="bag-slap" class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" aria-labelledby="Bolsa de compras">
+                <div class="offcanvas-header">
+                    <h2 id="bag-slap-title" class="offcanvas-title">Bolsa</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
                 </div>
-                <div id="login-grid">
-                    <div id="login">
-                        <h1 id="login-title">Iniciar Sesión</h1>
-                        <form id="login-form">
-                            <div class="form-div">
-                                <div class="mb-2">
-                                    <label for="input-email" class="form-label">Correo</label>
-                                    <input type="email" id="input-email" class="form-control" placeholder="tu_correo@yaslimoda.com">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="input-password" class="form-label">Contraseña</label>
-                                    <input type="password" id="input-password" class="form-control" placeholder="●●●●●●●●">
-                                </div>
-                            </div>
-                            <div class="form-div">
-                                <input type="submit" class="btn btn-primary" value="Ingresar">
-                                <input type="button" class="btn btn-secondary" id="register-button" value="Registrarse">
-                            </div>
-                        </form>
-                        <a id="forgot-password" href="#">Olvidé mi contraseña</a>
-                    </div>
-                    <div id="login-img"></div>
+                <div class="offcanvas-body">
                 </div>
             </section>
-            <section id="bag-slap">
-                <div class="slap-title">
-                    <h2>Bolsa</h2>
-                    <button id="exit-bag" class="exit"></button>
+            <section id="favorite-slap" class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" aria-labelledby="Favoritos">
+                <div class="offcanvas-header">
+                    <h2 id="favorite-slap-title" class="offcanvas-title">Favoritos</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body">
                 </div>
             </section>
-            <section id="favorite-slap">
-                <div class="slap-title">
-                    <h2>Favoritos</h2>
-                    <button id="exit-favorite" class="exit"></button>
-                </div>
-            </section>
-            <section id="search-slap">
-                <form id="search-form">
+            <section id="search-slap" class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" aria-labelledby="Busqueda">
+                <div class="offcanvas-header">
                     <input type="text" class="form-control" placeholder="Buscar...">
-                </form>
-                <button id="exit-search" class="exit"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
             </section>
-            <div id="blur"></div>
         </div>
         <main id="container">
-            <section id="banner" class="container-fluid position-relative d-flex align-items-center justify-content-center">
+            <section id="banner" class="position-relative d-flex align-items-center justify-content-center">
                 <img id="banner-img" class="object-fit-cover w-100 h-100 opacity-25 position-absolute" src="./img/clothes.webp" alt="Banner de la tienda">
                 <div id="banner-text" class="text-center position-relative">
-                    <h1>Yesti Moda</h1>
+                    <h1 class="fw-lighter">Yesti Moda</h1>
                 </div>
             </section>
-            <section id="novedades" class="container-fluid position-relative h-auto mb-5">
+            <section id="novedades" class="position-relative h-auto mb-5">
                 <div id="novedades-title" class="d-flex align-items-center justify-content-between px-4 pt-3">
-                    <h2>Novedades</h2>
-                    <a href="store.html"></a>
+                    <h2 class="fw-normal">Novedades</h2>
+                    <a href="store.html" class="btn border-0" role="button"></a>
                 </div>
                 <div id="carrusel-novedades" class="carousel slide d-flex flex-column" data-bs-ride="carousel">
                     <div id="carrusel" class="d-flex flex-row px-3">
                         <button class="carousel-control-prev position-relative d-none d-md-block align-self-center" id="carousel-prev-carousel" type="button" data-bs-target="#carrusel-novedades" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon w-100 h-100"></span>
+                            <span class="carousel-control-prev-icon w-100 h-100 border-0"></span>
                         </button>
-                        <div id="carrusel-inner" class="carousel-inner">
+                        <div id="carrusel-inner" class="carousel-inner px-md-3 pb-3">
                         </div>
                         <button class="carousel-control-next position-relative d-none d-md-block align-self-center" id="carousel-next-carousel" type="button" data-bs-target="#carrusel-novedades" data-bs-slide="next">
-                            <span class="carousel-control-next-icon w-100 h-100"></span>
+                            <span class="carousel-control-next-icon w-100 h-100 border-0"></span>
                         </button>
                     </div>
                     <div id="carrusel-controls" class="d-flex justify-content-center align-items-center w-100 px-4 gap-4">
                         <button class="carousel-control-prev position-relative d-md-none" id="carousel-prev-controls" type="button" data-bs-target="#carrusel-novedades" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon w-100 h-100"></span>
+                            <span class="carousel-control-prev-icon w-100 h-100 border-0"></span>
                         </button>
                         <div id="carrusel-indicators" class="carousel-indicators position-relative m-0 gap-2">
                         </div>
                         <button class="carousel-control-next position-relative d-md-none" id="carousel-next-controls" type="button" data-bs-target="#carrusel-novedades" data-bs-slide="next">
-                            <span class="carousel-control-next-icon w-100 h-100"></span>
+                            <span class="carousel-control-next-icon w-100 h-100 border-0"></span>
                         </button>
                     </div>
                 </div>
             </section>
-            <section id="categorias" class="container-fluid">
+            <section id="categorias">
                 <section id="categorias-title" class="sticky-top d-flex align-items-center justify-content-center p-1 z-0">
-                    <h2>Categorías</h2>
+                    <h2 class="fw-normal">Categorías</h2>
                 </section>
-                <section id="deportes-card" class="cards sticky-top z-0">
-                    <div class="background w-100 h-100">
-                        <img id="sports-img" class="object-fit-cover w-100 h-100 opacity-50 position-absolute" src="./img/cards_img/sport-image.webp" alt="Runner en la ciudad">
-                        <div id="sports-title" class="position-relative d-flex align-items-center justify-content-between px-4 pt-3"> 
-                            <h3>Deportiva</h3>
-                            <a href="store.html"></a>
+                <section id="deportes-card" class="cards sticky-top z-0 mb-5">
+                    <img id="sports-img" class="object-fit-cover w-100 h-100 opacity-50 position-absolute" src="./img/cards_img/sport-image.webp" alt="Runner en la ciudad">
+                    <div class="position-relative w-100 pt-3 px-4">
+                        <div id="sports-title" class="d-flex align-items-center justify-content-between"> 
+                            <h3 class="fw-normal">Deportiva</h3>
+                            <a href="/tienda" class="btn border-0" role="button"></a>
                         </div>
-                        <div></div>
+                        <div id="sports-body" class="row">
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section id="casual-card" class="cards sticky-top z-0">
-                    <div class="background w-100 h-100">
-                        <img id="casual-img" class="object-fit-cover w-100 h-100 opacity-50 position-absolute" src="./img/cards_img/casual-image.webp" alt="Mujer en la ciudad">
-                        <div id="casual-title" class="position-relative d-flex align-items-center justify-content-between px-4 pt-3"> 
-                            <h3>Casual</h3>
-                            <a href="store.html"></a>
+                <section id="casual-card" class="cards sticky-top z-0 mb-5">
+                    <img id="casual-img" class="object-fit-cover w-100 h-100 opacity-50 position-absolute" src="./img/cards_img/casual-image.webp" alt="Mujer en la ciudad">
+                    <div class="position-relative w-100 pt-3 px-4">
+                        <div id="casual-title" class="d-flex align-items-center justify-content-between"> 
+                            <h3 class="fw-normal">Casual</h3>
+                            <a href="/tienda" class="btn border-0" role="button"></a>
                         </div>
-                        <div></div>
+                        <div id="casual-body" class="row">
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section id="elegante-card" class="cards sticky-top z-0">
-                    <div class="background w-100 h-100">
-                        <img id="formal-img" class="object-fit-cover w-100 h-100 opacity-50 position-absolute" src="./img/cards_img/elegant-image.webp" alt="Mujer sentada en el parque">
-                        <div id="formal-title" class="position-relative d-flex align-items-center justify-content-between px-4 pt-3"> 
-                            <h3>Elegante</h3>
-                            <a href="store.html"></a>
+                <section id="elegante-card" class="cards sticky-top z-0 mb-5">
+                    <img id="formal-img" class="object-fit-cover w-100 h-100 opacity-50 position-absolute" src="./img/cards_img/elegant-image.webp" alt="Mujer sentada en el parque">
+                    <div class="position-relative w-100 pt-3 px-4">
+                        <div id="formal-title" class="d-flex align-items-center justify-content-between"> 
+                            <h3 class="fw-normal">Formal</h3>
+                            <a href="/tienda" class="btn border-0" role="button"></a>
                         </div>
-                        <div></div>
+                        <div id="formal-body" class="row">
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <a>
+                                    <div class="card shadow mb-3">
+                                        <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-2 py-2">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </section>
         </main>
-        <footer id="footer" class="container-fluid d-flex flex-column align-items-center justify-content-center mb-md-0">
+        <footer id="footer" class="d-flex flex-column align-items-center justify-content-center mb-md-0 gap-2 p-2">
             <div id="footer-logo"></div>
-            <div id="contact-icons" class="d-flex ">
-                <a id="contact-instagram" class="position-relative d-inline-block overflow-hidden"></a>
-                <a id="contact-facebook"></a>
-                <a id="contact-whatsapp"></a>
+            <div id="contact-icons" class="d-flex gap-2">
+                <a id="contact-instagram" class="btn border-0 position-relative d-inline-block overflow-hidden" role="button"></a>
+                <a id="contact-facebook" class="btn border-0" role="button"></a>
+                <a id="contact-whatsapp" class="btn border-0" role="button"></a>
             </div>
         </footer>
         <script src="./js/bootstrap.bundle.min.js"></script>
-        <script src="./js/script.js"></script>
         <script src="./js/script_index.js"></script>
     </body>
 </html>

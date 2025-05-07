@@ -26,7 +26,7 @@ function displayProducts(page) {
         col.className = 'col-6 col-md-4 col-xl-3'; // 2, 3 y 4 columnas responsivo
 
         col.innerHTML = `
-            <div class="card h-100 rounded-0">
+            <div class="card rounded-0 shadow">
                 <img src="./img/image-demo.webp" class="card-img-top object-fit-cover px-3 pt-3" alt="${product.name}">
                 <div class="card-body d-flex flex-column justify-content-center">
                     <h4 class="card-title fs-6 fw-normal">${product.name}</h4>
@@ -76,9 +76,9 @@ function createButton(text, page) {
     }else{
         button.textContent = text;
     }
-    button.classList.add('pagination-button');
+    button.classList.add('pagination-button', 'btn', 'border-0', 'fs-5');
     if (page === currentPage) {
-        button.classList.add('active');
+        button.classList.add('active', 'fw-bold', 'pe-none');
     }
     button.addEventListener('click', () => {
         currentPage = page;
